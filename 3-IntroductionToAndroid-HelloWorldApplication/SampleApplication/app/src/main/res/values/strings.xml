@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sample Application</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="welcome_text">Hello Arcelik</string>
+    <string name="start_service_button">Start BG Service</string>
+    <string name="stop_service_button">Stop BG Service</string>
+    <string name="start_intent_service_button">Start Intent Service</string>
+</resources>

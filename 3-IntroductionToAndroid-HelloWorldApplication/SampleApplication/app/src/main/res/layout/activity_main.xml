@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="400dp"
+            android:layout_marginTop="200dp"
+            android:text="@string/welcome_text"
+            android:textSize="@dimen/lb_details_description_title_text_size"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="420dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/start_service_button"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/start_intent_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="410dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/start_intent_service_button" />
+
+        <TextView
+            android:id="@+id/msgArea"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="100dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/lb_details_description_title_resized_text_size" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

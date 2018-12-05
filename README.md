@@ -12,7 +12,7 @@ There are 6 sessions in this training.
 
 Please find the presentations in the 'doc' folders.
 
-_**Compilation instruction for Java Design Patterns on Eclipse**_
+_**Instructions for compiling Java Design Patterns on Eclipse**_
 
    `1- Open Eclipse`  
    `2- Apply File -> New -> Java Project`  
@@ -20,7 +20,7 @@ _**Compilation instruction for Java Design Patterns on Eclipse**_
    `4- Choose Java-for-Cpp-Programmers/JavaDesignPatterns folder`  
    `5- Open Main.java file of any design pattern example, and run it on Eclipse`  
 
-_**Compilation instruction for Java Design Patterns on terminal**_
+_**Instructions for compiling Java Design Patterns on terminal**_
 
    `1- Open terminal`  
    `2- Change directory to Java-for-Cpp-Programmers/JavaDesignPatterns/src`  
@@ -28,5 +28,13 @@ _**Compilation instruction for Java Design Patterns on terminal**_
    `4- Run application via 'java /org/arcelik/<pattern>/Main'`   
 
 In order to edit class diagrams (files with '.ucls' extension) provided in JavaDesignPatterns, you should install ObjectAid UML Explorer plugin for Eclipse.
+
+_**Instructions for opening example Android TV projects in Android Studio**_
+
+   `1- Start Android Studio`  
+   `2- Click 'File > New > Open an existing Android Studio Project'`  
+   `3- Select related project root folder 'Open File or Project' window and click 'OK' button`  
+   `4- Run application as explained in the presentation`   
+
 
 Good luck.
