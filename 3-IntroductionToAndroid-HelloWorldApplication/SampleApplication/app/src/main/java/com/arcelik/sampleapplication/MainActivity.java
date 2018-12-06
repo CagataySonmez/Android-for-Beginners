@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         if(isMyServiceRunning(MyService.class))
             ((Button)findViewById(R.id.start_service)).setText(R.string.stop_service_button);
 
-        // Click this button to start service.
+        // Handle onClickListener of start service button.
         Button startService = (Button)findViewById(R.id.start_service);
         startService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        // Click this button to start intent service.
+        // Handle onClickListener of start intent service button.
         Button startIntentService = (Button)findViewById(R.id.start_intent_service);
         startIntentService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +64,16 @@ public class MainActivity extends Activity {
                 intent.setAction(MyIntentService.ACTION_SEND_NOTIFICATION);
                 intent.putExtra(MyIntentService.NOTIFICATION_METHOD, "TOAST");
                 startService(intent);
+            }
+        });
+
+        // Handle onClickListener of settings button.
+        Button settings = (Button)findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
             }
         });
 

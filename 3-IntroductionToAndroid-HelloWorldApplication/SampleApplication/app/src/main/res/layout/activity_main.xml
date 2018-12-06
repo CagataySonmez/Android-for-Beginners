@@ -4,49 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="960dp"
+        android:layout_height="515dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="400dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="25dp"
             android:text="@string/welcome_text"
+            android:textAlignment="center"
             android:textSize="@dimen/lb_details_description_title_text_size"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
-        <Button
-            android:id="@+id/start_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="420dp"
-            android:layout_marginTop="25dp"
-            android:text="@string/start_service_button"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/start_intent_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="410dp"
-            android:layout_marginTop="25dp"
-            android:text="@string/start_intent_service_button" />
+            <Button
+                android:id="@+id/start_service"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/start_service_button"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/start_intent_service"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/start_intent_service_button" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/settings_menu_button" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/msgArea"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:textAlignment="center"
-            android:textSize="@dimen/lb_details_description_title_resized_text_size" />
+            android:textSize="28sp" />
 
     </LinearLayout>
 
