@@ -2,7 +2,12 @@ package com.arcelik.sampleapplication;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.Context;
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Process;
+import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -40,28 +45,43 @@ public class MyIntentService extends IntentService {
             final String action = intent.getAction();
             final String method = intent.getStringExtra(NOTIFICATION_METHOD);
 
-            intentHandlerHelper(action, method);
+            //we have a sample business logic here:
+            //show toast message if the action is ACTION_SEND_NOTIFICATION
+            //and the method is TOAST
+            if (ACTION_SEND_NOTIFICATION.equals(action) && method.equals("TOAST"))
+                intentHandlerHelper();
+            else
+                Log.d(TAG_INTENT_SERVICE, "Intent received but action or method is not known!");
         }
     }
 
-    private void intentHandlerHelper(final String action, final String method) {
+    /**
+     * Do CPU intensive Tasks in onHandleIntent method.
+     * Do not worry, this method does not run in UI thread
+     */
+    private void intentHandlerHelper() {
+        try {
+            Thread.sleep(5000);
+            showToastMessage("This is my Toast message!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Toast message needs and application context to show message
+     * Therefore we call Toast.makeText function in UI thread
+     * Be careful, below code blocks UI thread, but we just use
+     * it to show toast message. This part is not related to the
+     * IntentService demo!
+     */
+    private void showToastMessage(final String msg){
         //create a handler to show Toast message
         Handler mHandler = new Handler(getMainLooper());
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                if (ACTION_SEND_NOTIFICATION.equals(action)) {
-                    try {
-                        Thread.sleep(5000);
-
-                        if (method.equals("TOAST"))
-                            Toast.makeText(getApplicationContext(), "This is my Toast message!", Toast.LENGTH_SHORT).show();
-                        else
-                            Log.d(TAG_INTENT_SERVICE, "Unknown notification method.");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
     }
