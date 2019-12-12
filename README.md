@@ -1,12 +1,13 @@
 # Android for Beginners
 
 This repository is prepared for the 'Android for Beginners' training sessions.
-There are 6 sessions in this training.
+There are 7 sessions in this training.
 
 * Java for C/C++ Programmers
 * Introduction to Android Programming I - Fundemental Concepts
 * Introduction to Android Programming II - Hello World Application
 * Introduction to Android Native Development Kit (NDK)
+* Introduction to Android WebView for Web Applications
 * Introduction to Android UI and Resource Structure
 * Introduction to MVC with RecyclerView
 
