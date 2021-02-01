@@ -1,7 +1,7 @@
 package org.arcelik.adapter;
 
-public class WavDecoder implements Decoder {
-	public void playMusic(){
+public class WavPlayer implements AudioPlayer {
+	public void play(){
     	System.out.println("Playing WAV file...");
     }
 }

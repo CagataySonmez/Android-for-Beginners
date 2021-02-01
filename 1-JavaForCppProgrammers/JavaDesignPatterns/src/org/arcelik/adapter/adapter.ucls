@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.14" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="org.arcelik.adapter.Mp3Decoder" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/org/arcelik/adapter/Mp3Decoder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="525" y="329"/>    
+  <class id="1" language="java" name="org.arcelik.adapter.Mp3Player" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/adapter/Mp3Player.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="374" y="341"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="org.arcelik.adapter.AudioPlayer" project="JavaDesignPatterns" 
+  <class id="2" language="java" name="org.arcelik.adapter.WavPlayer" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/adapter/WavPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="230" y="341"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="org.arcelik.adapter.AudioPlayer" project="JavaDesignPatterns" 
     file="/JavaDesignPatterns/src/org/arcelik/adapter/AudioPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="342" y="57"/>    
+    <position height="-1" width="-1" x="299" y="110"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="org.arcelik.adapter.PlayerAdapter" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/org/arcelik/adapter/PlayerAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="342" y="194"/>    
+  <class id="4" language="java" name="org.arcelik.adapter.LegacyPlayer" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/adapter/LegacyPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="640" y="326"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="org.arcelik.adapter.WavDecoder" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/org/arcelik/adapter/WavDecoder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="684" y="329"/>    
+  <class id="5" language="java" name="org.arcelik.adapter.LegacyPlayerAdapter" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/adapter/LegacyPlayerAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="641" y="110"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="org.arcelik.adapter.Decoder" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/org/arcelik/adapter/Decoder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="602" y="194"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
   <class id="6" language="java" name="org.arcelik.adapter.Main" project="JavaDesignPatterns" 
     file="/JavaDesignPatterns/src/org/arcelik/adapter/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="140" y="59"/>    
+    <position height="-1" width="-1" x="79" y="114"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -56,29 +56,29 @@
     </display>  
   </class>  
   <realization id="7">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
   </realization>  
-  <dependency id="8">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <realization id="9">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <realization id="10">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="11">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="12" name="decoder"/>      
-      <multiplicity id="13" minimum="0" maximum="1"/>    
+  <association id="8">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="9" name="legacyPlayer"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="11">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <realization id="12">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

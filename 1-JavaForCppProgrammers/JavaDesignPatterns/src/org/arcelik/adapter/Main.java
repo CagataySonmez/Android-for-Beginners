@@ -3,12 +3,15 @@ package org.arcelik.adapter;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		AudioPlayer mp3Player = new Mp3Player();
+		mp3Player.play();
 
-		AudioPlayer mp3Adapter = new PlayerAdapter("mp3");
-		mp3Adapter.play();
+		AudioPlayer wavPlayer = new WavPlayer();
+		wavPlayer.play();
 
-		AudioPlayer wavAdapter = new PlayerAdapter("wav");
-		wavAdapter.play();
+		LegacyPlayer legacyPlayer = new LegacyPlayer();
+		AudioPlayer legacyPlayerAdapter = new LegacyPlayerAdapter(legacyPlayer);
+		legacyPlayerAdapter.play();
 	}
-
 }
