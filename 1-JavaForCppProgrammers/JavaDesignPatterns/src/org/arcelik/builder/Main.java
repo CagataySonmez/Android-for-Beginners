@@ -1,4 +1,4 @@
-package com.arcelik.builder;
+package org.arcelik.builder;
 
 public class Main {
 

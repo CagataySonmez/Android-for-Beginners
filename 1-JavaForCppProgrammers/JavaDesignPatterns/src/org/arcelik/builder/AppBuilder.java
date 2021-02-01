@@ -1,6 +1,6 @@
-package com.arcelik.builder;
+package org.arcelik.builder;
 
-import com.arcelik.builder.Application.ApplicationBuilder;
+import org.arcelik.builder.Application.ApplicationBuilder;
 
 public abstract class AppBuilder {
 	 public abstract ApplicationBuilder name(String name);

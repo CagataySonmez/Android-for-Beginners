@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.14" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.arcelik.builder.Application" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/com/arcelik/builder/Application.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="org.arcelik.builder.Application" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/builder/Application.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="765" y="509"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.arcelik.builder.Application.ApplicationBuilder" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/com/arcelik/builder/Application.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="org.arcelik.builder.Application.ApplicationBuilder" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/builder/Application.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="405" y="509"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.arcelik.builder.AppBuilder" project="JavaDesignPatterns" 
-    file="/JavaDesignPatterns/src/com/arcelik/builder/AppBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="org.arcelik.builder.AppBuilder" project="JavaDesignPatterns" 
+    file="/JavaDesignPatterns/src/org/arcelik/builder/AppBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="404" y="264"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

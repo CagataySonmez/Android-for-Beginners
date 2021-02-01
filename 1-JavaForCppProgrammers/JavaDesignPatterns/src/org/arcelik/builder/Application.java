@@ -1,4 +1,4 @@
-package com.arcelik.builder;
+package org.arcelik.builder;
 
 public class Application {
 
@@ -21,7 +21,7 @@ public class Application {
 				"Rate: " + rate;
 	}
 	
-	public static class ApplicationBuilder extends com.arcelik.builder.AppBuilder {
+	public static class ApplicationBuilder extends org.arcelik.builder.AppBuilder {
 		private String name, shortDesc, longDesc, locale;
 		private int rate;
 		
