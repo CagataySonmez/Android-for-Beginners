@@ -1,17 +1,17 @@
 package org.arcelik.builder;
 
-import org.arcelik.builder.Application.ApplicationBuilder;
+import org.arcelik.builder.App.Builder;
 
 public abstract class AppBuilder {
-	 public abstract ApplicationBuilder name(String name);
+	 public abstract AppBuilder name(String name);
 	 
-     public abstract ApplicationBuilder shortDesc(String shortDesc);
+     public abstract AppBuilder shortDesc(String shortDesc);
      
-     public abstract ApplicationBuilder longDesc(String longDesc);
+     public abstract AppBuilder longDesc(String longDesc);
      
-     public abstract ApplicationBuilder locale(String locale);
+     public abstract AppBuilder locale(String locale);
      
-     public abstract ApplicationBuilder rate(int rate);
+     public abstract AppBuilder rate(int rate);
 
-     public abstract Application build();
+     public abstract App build();
 }

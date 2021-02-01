@@ -3,14 +3,14 @@ package org.arcelik.builder;
 public class Main {
 
 	public static void main(String[] args) {
-		Application youtube = new Application.ApplicationBuilder().
+		App youtube = new App.Builder().
 				name("YouTube").shortDesc("Official YouTube app").rate(5).build();
 		
 		System.out.println(youtube);
 		
 		System.out.println("---------------------");
 		
-		Application puhu = new Application.ApplicationBuilder().
+		App puhu = new App.Builder().
 				name("Puhu TV").locale("TR").build();
 
 		System.out.println(puhu);

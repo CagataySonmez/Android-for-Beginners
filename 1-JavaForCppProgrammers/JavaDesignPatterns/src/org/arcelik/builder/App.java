@@ -1,11 +1,11 @@
 package org.arcelik.builder;
 
-public class Application {
+public class App {
 
 	private String name, shortDesc, longDesc, locale;
 	private int rate;
 
-	private Application(ApplicationBuilder builder) {
+	private App(Builder builder) {
         this.name = builder.name;
         this.shortDesc = builder.shortDesc;
         this.longDesc = builder.longDesc;
@@ -21,44 +21,44 @@ public class Application {
 				"Rate: " + rate;
 	}
 	
-	public static class ApplicationBuilder extends org.arcelik.builder.AppBuilder {
+	public static class Builder extends org.arcelik.builder.AppBuilder {
 		private String name, shortDesc, longDesc, locale;
 		private int rate;
 		
-		public ApplicationBuilder(){
+		public Builder(){
 			this.locale = "Global";
 			this.rate = 3;
 			this.shortDesc = "N/A";
 			this.longDesc = "N/A";
 		}
 
-        public ApplicationBuilder name(String name){
+        public Builder name(String name){
             this.name = name;
             return this;
         }
         
-        public ApplicationBuilder shortDesc(String shortDesc){
+        public Builder shortDesc(String shortDesc){
             this.shortDesc = shortDesc;
             return this;
         }
         
-        public ApplicationBuilder longDesc(String longDesc){
+        public Builder longDesc(String longDesc){
             this.longDesc = longDesc;
             return this;
         }
         
-        public ApplicationBuilder locale(String locale){
+        public Builder locale(String locale){
             this.locale = locale;
             return this;
         }
         
-        public ApplicationBuilder rate(int rate){
+        public Builder rate(int rate){
             this.rate = rate;
             return this;
         }
 
-        public Application build(){
-            return new Application(this);
+        public App build(){
+            return new App(this);
         }
 	}
 }
