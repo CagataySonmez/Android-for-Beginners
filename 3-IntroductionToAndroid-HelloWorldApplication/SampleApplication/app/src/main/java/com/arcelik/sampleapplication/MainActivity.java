@@ -6,32 +6,38 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG_ACTIVITY = "SAMPLE_APP_ACTIVITY";
+
     //Use broadcast receiver to get broadcast messages
     final IntentFilter myFilter = new IntentFilter(MyService.BROADCAST_INTENT);
     private MyBroadcastReceiver mReceiver = new MyBroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            final TextView responseFromService = (TextView)findViewById(R.id.msgArea);
-            responseFromService.setText(intent.getCharSequenceExtra("msg"));
+            String msg = (String) intent.getCharSequenceExtra("msg");
+            Log.d(TAG_ACTIVITY, "Broadcast msg received: " + msg);
+            final TextView msgArea = (TextView)findViewById(R.id.msgArea);
+            msgArea.setText(msg);
         }
     };
 
     @Override
-    public void onDestroy() {
-        unregisterReceiver(mReceiver);
-        super.onDestroy();
+    protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG_ACTIVITY, "onCreate");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void onStart() {
+        Log.d(TAG_ACTIVITY, "onStart");
+        super.onStart();
 
         if(isMyServiceRunning(MyService.class))
             ((Button)findViewById(R.id.start_service)).setText(R.string.stop_service_button);
@@ -78,6 +84,31 @@ public class MainActivity extends Activity {
         });
 
         registerReceiver(mReceiver, myFilter);
+    }
+
+    @Override
+    public void onResume() {
+        Log.d(TAG_ACTIVITY, "onResume");
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        Log.d(TAG_ACTIVITY, "onPause");
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        Log.d(TAG_ACTIVITY, "onStop");
+        unregisterReceiver(mReceiver);
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG_ACTIVITY, "onDestroy");
+        super.onDestroy();
     }
 
     //helper function to check if background service (MyService) is running
