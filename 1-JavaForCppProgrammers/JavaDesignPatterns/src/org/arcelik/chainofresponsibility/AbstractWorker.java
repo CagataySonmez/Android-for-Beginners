@@ -10,7 +10,7 @@ public abstract class AbstractWorker {
 		   step = 0;
 	   }
 
-	   public void setNextLogger(AbstractWorker nextWorker){
+	   public void setNextWorker(AbstractWorker nextWorker){
 	      this.nextWorker = nextWorker;
 	   }
 	   

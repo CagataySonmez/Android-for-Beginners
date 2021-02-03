@@ -21,7 +21,7 @@ public class InternetObservable {
       observers.add(observer);		
    }
 
-   public void notifyAllObservers(){
+   private void notifyAllObservers(){
       for (Observer observer : observers) {
          observer.update();
       }

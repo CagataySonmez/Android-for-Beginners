@@ -9,9 +9,9 @@ public class Main {
 		AbstractWorker sourceWorker = new SourceWorker();
 		AbstractWorker StatisticsWorker = new StatisticsWorker();
 
-		muteWorker.setNextLogger(sourceWorker);
-		sourceWorker.setNextLogger(unmuteWorker);
-		unmuteWorker.setNextLogger(StatisticsWorker);
+		muteWorker.setNextWorker(sourceWorker);
+		sourceWorker.setNextWorker(unmuteWorker);
+		unmuteWorker.setNextWorker(StatisticsWorker);
 
 		return muteWorker;	
 	}
