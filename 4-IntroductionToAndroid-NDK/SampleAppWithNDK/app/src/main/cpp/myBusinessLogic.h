@@ -7,11 +7,11 @@ class myBusinessLogic
 {
 private:
     std::string msg;
-    void reportStatistic();
+    void reportStatistic(bool appendResult);
 
 public:
     myBusinessLogic(std::string name);
-    std::string  getMsg();
+    std::string  getMsg(bool withResult);
 };
 
 #endif //MYAPPLICATION_MYBUSINESSLOGIC_H
