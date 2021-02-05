@@ -20,7 +20,7 @@ void myBusinessLogic::reportStatistic(bool appendResult){
     std::string resultAsStr;
 
     if(curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://scooterlabs.com/echo");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://www.google.com");
         res = curl_easy_perform(curl);
         curl_easy_cleanup(curl);
 
